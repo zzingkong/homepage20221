@@ -16,6 +16,7 @@ import egovframework.let.utl.fcc.service.EgovStringUtil;
 
 import egovframework.rte.fdl.cmmn.exception.EgovBizException;
 import egovframework.rte.fdl.property.EgovPropertyService;
+import egovframework.rte.psl.dataaccess.util.EgovMap;
 import egovframework.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 
 import javax.annotation.Resource;
@@ -47,4 +48,14 @@ public class TempController {
 	model.addAttribute("result", result);
 	return "temp/TempSelect";
 	}
+	
+	//임시데이터목록 가져오기
+	@RequestMapping(value = "/temp/selectList.do")
+	public String selectList(@ModelAttribute("serchVO") TempVO serchVO, HttpServletRequest request, ModelMap model) throws Exception { 
+		List<EgovMap> resultList = tempService.selectTempList(serchVO);
+		model.addAttribute("resultList", resultList);
+	
+	return "temp/TempSelectList";
+	}	
+	
 }
