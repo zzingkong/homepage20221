@@ -2,7 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <%@ taglib prefix="ui" uri="http://egovframework.gov/ctl/ui" %>    
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>     
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>   
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>    
 
 <!DOCTYPE html>
@@ -80,6 +81,10 @@
    </li>
    </c:when>
   
+  
+   
+   
+  
    
    <c:when test="${step eq '6'}">
    <li>
@@ -125,8 +130,145 @@
              <a href="${link2}" target="_blank">링크 2번</a>
              
      </li>
-    </c:when>              
-    </c:choose>    
+    </c:when>      
+    
+    <%--functuin tag 설명 --%>
+  <c:when test="${step eq '9'}">
+  <li>
+   	<h3>fn:contains() :  주어진 문자열이 특정 문자열을 포함하고 있는지 확인하는데 사용</h3>
+   
+   	<c:set var="str" value="지금은fn:contains 연습중"/>
+  	 <c:if test="${fn:contains(str, '지금')}">
+    true
+     </c:if>
+   </li>
+ </c:when>
+ 
+  <c:when test="${step eq '10'}">
+    <li>
+       <h3>fn:indexOf() :  주어진 문자열이 특정 문자열로 끝나는 지 확인하는데 사용</h3>
+       
+       <c:set var="string" value="IT is first String."/>
+       <p>Index : ${fn:indexOf(string, "first")}</p>
+     </li>
+ </c:when>
+ 
+ <c:when test="${step eq '11'}">
+ <li>
+ 		<h3>fn:startsWith() : 주어진 문자열이 특정 문자열 값으로 시작되는지 확인하는 데 사용</h3>
+ 		
+ 		<c:set var="String" value="Welcome to JSP programming"/>
+ 		<c:if test="${fn:startsWith(String, 'Welcome')}">
+ 		   <p>String starts with Welcome</p>
+ 		 </c:if>
+ 		
+ 		<c:if test="${fn:startsWith(String, 'programming')}">
+ 		  <p>String starts with programming</p>
+ 		  </c:if>
+ 	</li>
+ </c:when>
+<c:when test="${step eq '12'}">
+ <li>
+     <h3>fn:endsWith() : 주어진 문자열이 특정 문자열 값으로 끝나는 지 확인하는데 사용</h3>
+     
+     <c:set var="String" value="Welcome to JSP programming"/>
+     <c:if test="${fn:endsWith(String, 'programming')}">
+      	<p>String ends with programming</p>
+     </c:if>
+     
+     <c:if test="${fn:endsWith(String,'JSP')}">
+        <P>String ends with JSP</p>
+      </c:if>
+   </li>
+ </c:when>
+ 
+ <c:when test="${step eq '13'}">
+  	<li>
+  		<h3>fn:split() :주어진 문자열을 특정 문자로 구분해서 배열로 분할</h3>
+  		
+  		<c:set var="str" value="1,2,3,4,5,6"/>
+  		<c:set var="strSplit" value="${fn:split(str,',')}"/>
+  		<c:forEach var="result" items="${strSplit}">
+  			<c:out value="${result}"/><br/>
+  		</c:forEach>
+  </li>
+</c:when>
+
+<c:when test="${step eq '14'}">
+  <li>
+     <h3>fn:length() : 문자열 내부의 문자 수 또는 컬렉션의 항목 수를 반환</h3>
+     
+     <c:set var="str1" value="This is first string"/>
+     <c:set var="str2" value="1,2,3,4,5,6"/>
+     <c:set var="strSplit" value="${fn:split(str,',')}"/>
+     Length of the String-1 is: <c:out value="${fn:length(str1)}"/><br>
+     Length of the String-2 is: <c:out value="${fn:length(str2)}"/>
+    </li>
+ </c:when>
+ <c:when test="${step eq '15'}">
+   <li>
+   		<h3>fn:toLowerCase() : 문자열의 모든 문자를 소문자로 변환</h3>
+   		
+   		<c:set var="string" value="Welcome to JSP Programming"/>
+   		<c:out value="${fn:toLowerCase(string)}"/>
+   	</li>
+  </c:when>
+ 
+<c:when test="${step eq '16'}">
+  <li>
+      <h3>fn:toUpperCase() : 문자열의 모든 문자를 대문자로 변환 </h3>
+      
+      <c:set var="string" value="Welcome to JSP Programming"/>
+      <c:out value="${fn:toUpperCase(string)}"/>
+       	</li>
+  </c:when>
+
+<c:when test="${step eq '17'}">
+    <li>
+    	<h3>fn:substring() : 주어진 시작 및 끝 위치에 따라 문자열의 하위 집합을 반환</h3>
+     
+        <c:set var="string" value="2022-01-01"/>
+        <c:out value="${fn:substring(string, 0, 4)}"/>
+        <c:out value="${fn:substring(string, 5, 7)}"/>
+    </li>
+</c:when>   
+
+<c:when test="${step eq '18'}">
+   <li>
+        <h3>fn:replace() : 모든 문자열을 다른 문자열 시쿼스로 바꿈</h3>
+        
+        <c:set var="string" value="2022-01-01"/>
+        <c:out value="${fn:replace(string, '-', '.')}"/>
+   </li>
+ </c:when>      
+ 
+<c:when test="${step eq '19'}">
+   <li>
+   	<h3>fn:trim() : 문자열의 양쪽 끝에서 공백을 제거</h3>
+   	
+   	<c:set var="str1" value="Welcome to JSP                        programming           " />
+   	<p>String-1 Length is : ${fn:length(str1)}</p>
+   	
+    <c:set var="str2" value="${fn:trim(str1)}" />
+    <p>String-2 Length is : ${fn:length(str2)}</p>
+    <p>Final value of string if : ${str2}</p>	
+   </li>
+</c:when> 
+    
+ <%--formatting tag 설명 --%>    
+<c:when test="${step eq '20'}">
+   <li>
+       <h3>fmt:formatDate : 제공된 패턴 및 스타일을 사용하여 시간 및 날짜를 형식화함</h3>
+       <c:set var="Date" value="<%=new java.util.Date()%>"/>
+       ${Date}<br/>
+       <fmt:formatDate value="${Date}" pattern="yyyy-MM-dd"/>
+  </li>
+ </c:when>
+     
+     
+     
+     
+</c:choose>    
             
 </body>
 </html>
