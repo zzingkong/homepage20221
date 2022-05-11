@@ -1,10 +1,9 @@
-package egovframework.let.temp2.web;
+package egovframework.let.crud.web;
 import java.util.List;
 
+import egovframework.let.crud.service.CrudService;
+import egovframework.let.crud.service.CrudVO;
 
-
-import egovframework.let.temp2.service.Temp2Service;
-import egovframework.let.temp2.service.Temp2VO;
 import egovframework.let.utl.fcc.service.EgovStringUtil;
 
 
@@ -24,24 +23,24 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller
-public class Temp2Controller {
+public class CrudController {
 
-	@Resource(name = "temp2Service")
-	private Temp2Service temp2Service;
+	@Resource(name = "crudService")
+	private CrudService crudService;
 	
 	//임시데이터 가져오기
-	@RequestMapping(value = "/temp2/select.do")
-	public String select(@ModelAttribute("serchVO") Temp2VO serchVO,
+	@RequestMapping(value = "/crud/select.do")
+	public String select(@ModelAttribute("serchVO") CrudVO serchVO,
 	 HttpServletRequest request, ModelMap model) throws Exception {
 		
-	Temp2VO result = temp2Service.selectTemp(serchVO);
+	CrudVO result = crudService.selectCrud(serchVO);
 	model.addAttribute("result", result);
-	return "temp2/TempSelect";
+	return "crud/CrudSelect";
 	}
 	
 	//임시데이터목록 가져오기
-	@RequestMapping(value = "/temp2/selectList.do")
-	public String selectList(@ModelAttribute("searchVO") Temp2VO searchVO, HttpServletRequest request, ModelMap model) 
+	@RequestMapping(value = "/crud/selectList.do")
+	public String selectList(@ModelAttribute("searchVO") CrudVO searchVO, HttpServletRequest request, ModelMap model) 
 	throws Exception { 
 
 	PaginationInfo paginationInfo = new PaginationInfo();
@@ -54,52 +53,52 @@ public class Temp2Controller {
 	searchVO.setLastIndex(paginationInfo.getLastRecordIndex() );
 	searchVO.setRecordCountPerPage(paginationInfo.getRecordCountPerPage() );
 	
-	int totCnt = temp2Service.selectTempListCnt(searchVO);
+	int totCnt = crudService.selectCrudListCnt(searchVO);
 	
 	paginationInfo.setTotalRecordCount(totCnt);
 	model.addAttribute("paginationInfo" , paginationInfo);
 	
-	List<EgovMap> resultList = temp2Service.selectTempList(searchVO);
+	List<EgovMap> resultList = crudService.selectCrudList(searchVO);
 	model.addAttribute("resultList", resultList);
 			
-	return "temp2/TempSelectList";
+	return "crud/CrudSelectList";
 	}	
 	
 	//임시데이터 등록/수정
-	@RequestMapping(value = "/temp2/tempRegist.do")
-	public String tempRegist(@ModelAttribute("searchVO") Temp2VO tempVO,
+	@RequestMapping(value = "/crud/crudRegist.do")
+	public String crudRegist(@ModelAttribute("searchVO") CrudVO crudVO,
 	HttpServletRequest request, ModelMap model) throws Exception { 
 		
-    Temp2VO result = new Temp2VO();
-    if(!EgovStringUtil.isEmpty(tempVO.getTempId())) {
-    	result = temp2Service.selectTemp(tempVO);    }
+    CrudVO result = new CrudVO();
+    if(!EgovStringUtil.isEmpty(crudVO.getCrudId())) {
+    	result = crudService.selectCrud(crudVO);    }
     model.addAttribute("result", result);
 	
-	return "temp2/TempRegist";
+	return "crud/CrudRegist";
 		
 }
 	//임시데이터 등록하기 
-	@RequestMapping(value = "/temp2/insert.do")
-	public String insert(@ModelAttribute("searchVO") Temp2VO searchVO,
+	@RequestMapping(value = "/crud/insert.do")
+	public String insert(@ModelAttribute("searchVO") CrudVO searchVO,
 		HttpServletRequest request, ModelMap model) throws Exception { 
-		temp2Service.insertTemp(searchVO);	
-		return "forward:/temp2/selectList.do";
+		crudService.insertCrud(searchVO);	
+		return "forward:/crud/selectList.do";
 	}
 	//임시데이터 수정하기
-	@RequestMapping(value = "/temp2/update.do")
-	public String update(@ModelAttribute("searchVO") Temp2VO searchVO,
+	@RequestMapping(value = "/crud/update.do")
+	public String update(@ModelAttribute("searchVO") CrudVO searchVO,
 		HttpServletRequest request, ModelMap model) throws Exception { 
 		
-		temp2Service.updateTemp(searchVO);	
-		return "forward:/temp2/selectList.do";
+		crudService.updateCrud(searchVO);	
+		return "forward:/crud/selectList.do";
 	}
 	
 	//임시데이터 삭제하기
-	@RequestMapping(value = "/temp2/delete.do")
-	public String delete(@ModelAttribute("searchVO") Temp2VO searchVO,
+	@RequestMapping(value = "/crud/delete.do")
+	public String delete(@ModelAttribute("searchVO") CrudVO searchVO,
 		HttpServletRequest request, ModelMap model) throws Exception { 		
-		temp2Service.deleteTemp(searchVO);	
-		return "forward:/temp2/selectList.do";
+		crudService.deleteCrud(searchVO);	
+		return "forward:/crud/selectList.do";
 	}		
 
 		
