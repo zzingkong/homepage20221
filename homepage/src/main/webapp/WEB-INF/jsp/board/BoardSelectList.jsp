@@ -139,7 +139,7 @@
   </div>
  </div>
  <div class="btn-cont ar">
- 	<a href="board/boardRegist.do" class="btn spot"><i class="ico-check-spot"></i> 글쓰기</a>
+ 	<a href="/board/boardRegist.do" class="btn spot"><i class="ico-check-spot"></i> 글쓰기</a>
      </div>
    </div>
 </div>
