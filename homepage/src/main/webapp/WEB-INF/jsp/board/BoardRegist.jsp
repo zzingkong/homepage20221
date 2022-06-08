@@ -33,7 +33,7 @@
 <div class="container">
 <div id="contents">
 	<form action="${actionUrl}" method="post" id="frm" name="frm" onsubmit="return regist()">
-		<input type="hidden" name="boardId" value="${reseult.boardId}"/>
+		<input type="hidden" name="boardId" value="${result.boardId}"/>
 		
 	<table class="chart2">
 		<caption>게시글 작성</caption>
@@ -64,7 +64,7 @@
 						<input type="radio" id="othbAtY" value="Y" name="othbcAt" <c:if test="${result.othbcAt eq 'Y'}">checked="cheked"</c:if>/>&nbsp;&nbsp;&nbsp;
 						<label for="noticeAtN">아니오:</label>
 						<input type="radio" id="othbAtN" value="N" name="othbcAt" <c:if test="${result.othbcAt ne 'Y'}">checked="cheked"</c:if>/>
-					</td>ㄴ
+					</td>
 				<tr>
 					<th scope="row">작성자ID</th>
 					<td>
@@ -85,7 +85,8 @@
 				<c:url var="uptUrl" value="/board/update.do">
 					<c:param name="boardId" value="${result.boardId}"/>
 				</c:url>
-				<a href="${uptUrl}" id="btn-reg" calss="btn">수정</a>
+				<a href="${uptUrl}" id="btn-reg" class="btn">수정</a>
+				
 				<c:url var="delUrl" value="/board/delete.do">
 					<c:param name="boardId" value="${result.boardId}"/>
 				</c:url>

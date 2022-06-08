@@ -16,4 +16,7 @@
 <%--
 <jsp:forward page="/cmm/main/mainPage.do"/>
 --%>
-<script type="text/javaScript">document.location.href="<c:url value='/cmm/main/mainPage.do'/>"</script> 
+<script type="text/javaScript">document.location.href="<c:url value='/cmm/main/mainPage.do'/>"</script>
+ 
+<!-- 
+<script type="text/javaScript">document.location.href="<c:url value='/cmm/main/mainPage.do'/>"</script> 여기로 링크를 이동하게 하면 되는건가봐--> 

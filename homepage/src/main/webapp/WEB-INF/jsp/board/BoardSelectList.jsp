@@ -75,10 +75,10 @@
 				    
 	    <%--공지글 --%>
 	    <c:forEach var="result" items="${noticeResultList}" varStatus="status">
-	    	<tr calss="notice">
+	    	<tr class="notice">
 	    		<td class="num"><span class="label-bbs spot">공지</span></td>
-	    		<td class"tit">
-	    			<c:url var="veiwUrl" value="/board/select.do${_BASE_PARAM}">
+	    		<td class="tit">
+	    			<c:url var="viewUrl" value="/board/select.do${_BASE_PARAM}">
 	    				<c:param name="boardId" value="${result.boardId}"/>
 	    				<c:param name="pageIndex" value="${searchVO.pageIndex}"/>
 	    			</c:url>
@@ -88,7 +88,7 @@
 	    			<c:out value="${result.frstRegisterId}"/>
 	    		</td>
 	    		<td class="date" data-cell-header="작성일:  ">
-	    			<fmt:formatDate value="${result.frstRegisterId}" pattern="yyy-MM-dd"/>
+	    			<fmt:formatDate value="${result.frstRegistPnttm}" pattern="yyyy-MM-dd"/>
 	    		</td>
 	    		<td class="hits" data-cell-header="조회수:  ">
 	    			<c:out value="${result.inqireCo}"/>
@@ -103,7 +103,7 @@
 				<c:out value="${paginationInfo.totalRecordCount - ((searchVO.pageIndex-1) * searchVO.pageUnit) - (status.count -1)}"/>	
 			</td>
 			<td class="tit">
-				<c:url var="veiwUrl" value="/board/select.do${_BASE_PARAM}">
+				<c:url var="viewUrl" value="/board/select.do${_BASE_PARAM}">
 					<c:param name="boardId" value="${result.boardId}"/>
 					<c:param name="pageIndex" value="${searchVO.pageIndex}"/>
 				</c:url>
@@ -135,7 +135,7 @@
 <div id="paging">
 	<c:url var="pageUrl" value="/board/selectList.do${_BASE_PARAM}"/>
 	<c:set var="pagingParam"><c:out value="${pageUrl}"/></c:set>
-	<ui:pagination paginationInfo="${paginationInfo}" type="image" jsFunction="${paginParam}"/>
+	<ui:pagination paginationInfo="${paginationInfo}" type="image" jsFunction="${pagingParam}"/>
   </div>
  </div>
  <div class="btn-cont ar">
