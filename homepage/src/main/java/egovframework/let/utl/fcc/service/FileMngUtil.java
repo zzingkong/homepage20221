@@ -43,7 +43,7 @@ public class FileMngUtil {
 			storePathString = propertyService.getString(storePath);
 		}
 		
-		//첨부파일ID 생성 및 업데이트 여부
+		//첨부파일ID 생성 및 업데이트 여부 첨부파일 
 		if("".equals(atchFileId) || atchFileId == null) {
 			atchFileIdString = idgenService.getNextStringId();
 		} else {

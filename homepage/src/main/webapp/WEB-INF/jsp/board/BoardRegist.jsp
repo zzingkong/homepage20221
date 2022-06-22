@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv="Content-Language" content="ko">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-sacle=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
 <title>수업용 게시판</title>
 <!-- BBS Style -->
 <link href="/asset/BBSTMP_0000000000001/style.css" rel="stylesheet"/>
@@ -110,7 +110,7 @@ $(function(){
 <div id="contents">
 	<form action="${actionUrl}" method="post" id="frm" name="frm" onsubmit="return regist()" enctype="multipart/form-data">
 		<input type="hidden" name="boardId" value="${result.boardId}"/>
-		
+		<input type="hidden" name="returnUrl" value="/board/boardRegist.do"/>
 	<table class="chart2">
 		<caption>게시글 작성</caption>
 		<colgroup>
@@ -147,16 +147,37 @@ $(function(){
 						<c:out value="${USER_INFO.id}"/>
 					</td>
 				</tr>
+				
 				<tr>
 					<th scope="row">내용</th>
 					<td>
 						<textarea id="boardCn" name="boardCn" rows="15" title="내용입력"><c:out value="${result.boardCn}"/></textarea>
 					</td>
 				</tr>
+				
+				<c:if test="${not empty result.atchFileId}">
+					<tr>
+						<th scope="row">기족<br/>첨부파일목록</th>
+						<td>
+							<c:import url="/cmm/fms/selectFileInfsForUpdate.do" charEncoding="utf-8">
+								<c:param name="param_atchFileId" value="${result.atchFileId}"/>
+							</c:import>
+						</td>
+					</tr>
+				</c:if>
+				
 				<tr> 
 					<th scope="row">파일첨부</th>
 					<td>
-						<input type="file" name="file_1">
+						<input type="file" name="file_1"/>
+						 <br/>
+						<input type="file" name="file_2"/>
+						<br/>
+						<input type="file" name="file_3"/>
+						<br/>
+						<input type="file" name="file_4"/>
+						<br/>
+						<input type="file" name="file_5"/>						
 					</td>	
 				</tr>		
 		</tbody>	

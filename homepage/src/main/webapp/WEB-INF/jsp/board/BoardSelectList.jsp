@@ -21,7 +21,7 @@
 <head>
 <meta http-equiv="Content-Language" content="ko">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-sacle=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
 <title>수업용 게시판</title>
 <!-- BBS Style -->
 <link href="/asset/BBSTMP_0000000000001/style.css" rel="stylesheet"/>
@@ -102,7 +102,16 @@
 	   		<td class="num">
 				<c:out value="${paginationInfo.totalRecordCount - ((searchVO.pageIndex-1) * searchVO.pageUnit) - (status.count -1)}"/>	
 			</td>
+			
 			<td class="tit">
+			   <c:if test="${not empty result.atchFileNm}">
+			    <c:url var="thumbUrl" value="/cmm/fms/getThumbImage.do">
+			    	<c:param name="thumbYn" value="Y"/>
+			    	<c:param name="atchFileNm" value="${result.atchFileNm}"/>
+			    </c:url>
+			    <img src="${thumbUrl}" alt=""/>
+			    </c:if>
+			    
 				<c:url var="viewUrl" value="/board/select.do${_BASE_PARAM}">
 					<c:param name="boardId" value="${result.boardId}"/>
 					<c:param name="pageIndex" value="${searchVO.pageIndex}"/>

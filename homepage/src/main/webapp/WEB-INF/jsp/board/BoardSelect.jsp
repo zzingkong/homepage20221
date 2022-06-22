@@ -11,7 +11,7 @@
 <head>
 <meta http-equiv="Content-Language" content="ko">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-sacle=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
 <title>수업용 게시판</title>
 <!-- BBS Style -->
 <link href="/asset/BBSTMP_0000000000001/style.css" rel="stylesheet"/>
@@ -45,6 +45,16 @@
 					<dt>조회수</dt>
 					<dd><c:out value="${result.inqireCo}"/></dd>
 				</dl>
+				
+				<dl class="tit_view">
+				   <dt>첨부파일목록</dt>
+				   <dd>
+				   	<c:import url="/cmm/fms/selectFileInfs.do" charEncoding="utf-8">
+				   		<c:param name="param_atchFileId" value="${result.atchFileId}" />
+				   		</c:import>
+				   	</dd>				
+				</dl>
+				
 				<div class="view_cont">
 						<c:out value="${result.boardCn}" escapeXml="false"/>
 				</div>		
