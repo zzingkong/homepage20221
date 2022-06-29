@@ -247,6 +247,7 @@ public class EgovFileScrty {
      * @param id salt로 사용될 사용자 ID 지정
      * @return
      * @throws Exception
+     * 암호화 규칙이니 인터넷에서 찾아볼것
      */
     public static String encryptPassword(String password, String id) throws Exception {
 
