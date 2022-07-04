@@ -40,15 +40,18 @@
      </div>
         <div class="sl-txt">
         <div><h2>오늘 너의 기분은 어때?</h2></div><br>
-        <div class="search">
-            <input type="text" placeholder="검색어 입력">
-            <img class="search2" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
-          </div>
+        	<div class="main_search">
+            	<input type="text" placeholder="기분입력">
+           		<span><a href="/board/musicList.do"><img class="search2" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"></a></span>           	
+        		<span class="tag">#행복</span>    
+        		<span class="tag">#우울</span>  
+        		<span class="tag">#슬픔</span>     
+    		<div>        
         </div>
     </section>
     <section class="content">       
         <div class="item-wrap">
-            <h3>오늘의 노래</h3>
+            <h3 class="m_title">오늘의 노래</h3>
              <span class="wrap">
 		        <span><img src="../../../asset/front/images/PSY.JPG"><a class="fir" href="">PSY</a></span>
 		        <span><img src="../../../asset/front/images/IDLE.JPG"><a class="sec" href="">IDLE</a></span>
@@ -59,7 +62,7 @@
 	   		 </span>
         </div>     
         <div class="item-wrap2">            
-            <h3>인기순위차트</h3>
+            <h3 class="m_title">인기순위차트</h3>
        </div> 
     </section>
 
