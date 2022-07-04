@@ -49,6 +49,14 @@
     <section class="content">       
         <div class="item-wrap">
             <h3>오늘의 노래</h3>
+             <span class="wrap">
+		        <span><img src="../../../asset/front/images/PSY.JPG"><a class="fir" href="">PSY</a></span>
+		        <span><img src="../../../asset/front/images/IDLE.JPG"><a class="sec" href="">IDLE</a></span>
+		        <span><img src="../../../asset/front/images/Im.JPG"><a class="thi" href="">Im</a></span>
+		        <span><img src="../../../asset/front/images/IVE.JPG"><a class="for" href="">IVE</a></span>
+		        <span><img src="../../../asset/front/images/BTS.JPG"><a class="fif" href="">BTS</a></span>
+		        <span><img src="../../../asset/front/images/MeloMance.JPG"><a class="six" href="">MeloMance</a></span>  
+	   		 </span>
         </div>     
         <div class="item-wrap2">            
             <h3>인기순위차트</h3>

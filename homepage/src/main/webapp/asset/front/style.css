@@ -40,7 +40,7 @@ input[type=tel] {
 
 #header{
     width: 1200px;
-    height: 80px;
+    height: 100px;
     margin: 0 auto; /*가운데 배치*/
 
 }
@@ -60,7 +60,7 @@ input[type=tel] {
 .slider {
     background-image: url(images/Main.png); 
     background-repeat: no-repeat;
-    height: 560px;  
+    height: 500px;  
 }
 .slider .sl-txt {
     color:#ccc;
@@ -75,7 +75,7 @@ input[type=tel] {
     margin-left: 35%;
   }
   
- input {
+input {
     vertical-align:middle;
     width: 100%;
     height:60px;
@@ -94,7 +94,7 @@ input[type=tel] {
   }
 .content {
     width: 1200px;
-    height: 350px;
+    height: 45%;
     margin: 0 200px;
     background:white;
     text-align: center;
@@ -102,11 +102,55 @@ input[type=tel] {
 }
 .item-wrap{
     margin: 0 auto;
-    width: 300px;  
+    width: 700px;  
     margin-left: 250px;
     display: inline-block;
-  }
-  .item-wrap2{
+ }
+.content .item-wrap .wrap  {
+    display: grid;
+     grid-template-columns: 150px 150px 150px;/* 각 그리드 아이템 너비 지정해서 수평 정렬 px로 지정 시 너비가 고정*/
+    /*grid-template-columns: 1fr 1fr 1fr; 화면 비율에 따라 크기 변화*/
+     gap: 10px; /*그리드 사이 여백 주기*/
+     grid-template-rows: 150px 150px; /*그리드 아이템의 높이*/
+}
+.wrap img {	
+    width: 100%; height: 100%; /*img 다 채우기*/
+    padding: 0 auto;
+     }
+.wrap span {
+    position: relative; /*요소 자기 자신을 기준으로 배치 */
+}
+
+.wrap .fir, .sec, .thi, .for, .fif, .six {
+    position: absolute; /*부모요소를 기준으로 배치*/
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(90,0,10,0.4);
+
+           
+    /* typographic styles */
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    
+    /* position the text centrally*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+
+    /* hide the title by default */
+  	opacity: 0;  /*기본상태*/
+  	transition: opacity .5s; 
+}
+ 
+.fir:hover, .sec:hover, .thi:hover, .for:hover, .fif:hover, .six:hover{
+        opacity: 1; /*hover상태일때*/
+    }
+.item-wrap2{
     margin: 0 auto;
     width: 300px;  
     margin-left: 300px;
@@ -124,7 +168,6 @@ input[type=tel] {
     padding: 50px 0;
     font-size: 1.5em;
 }
-
 
 .dim {
     display: none;
