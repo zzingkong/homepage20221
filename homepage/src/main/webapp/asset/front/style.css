@@ -9,7 +9,7 @@ img,fieldset {border:0;}
 em {font-style:normal;}
 input.radio {width:13px; height:13px; vertical-align:middle;}
 a {text-decoration:none; color:#ffffff; }
-a:hover {color:#06bbf7;}
+/* a:hover {color:#06bbf7;} */
 address,em,i {font-style:normal;}
 .hdn, legend{font-size:0; height:0; overflow:hidden; position:absolute;visibility:hidden; width:0; line-height:0;}
 table caption.hdn{font-size:0; height:0; overflow:hidden; position:static;visibility:hidden; width:0; line-height:0;}
@@ -54,9 +54,12 @@ input[type=tel] {
 #header .gnb li {
     display: inline-block;
     padding: 34px 20px;
-    color: #ffffff;
-    
+    color: #ffffff;   
 }
+#header .gnb li a:hover {
+ color:#06bbf7;
+ }
+  
 .slider {
     background-image: url(images/Main.png); 
     background-repeat: no-repeat;
@@ -102,18 +105,14 @@ input {
     margin: 0;
   }
 .content {
-    width: 1200px;
-    height: 45%;
-    margin: 0 30px;
-    background:white;
-    text-align: center;
-    display: inline-block;  
+    width: 1200px;    
+    height:410px;
+    background:white;  
+    margin-left:25%; 
 }
-.item-wrap{
-    margin: 0 auto;
-    width: 700px;  
-    margin-left: 250px;
-    display: inline-block;
+.item-wrap{    
+    width: 500px;    
+    float:left;
  }
 .m_title {
  	padding: 20px; 
@@ -146,7 +145,7 @@ input {
     /* typographic styles */
     color: white;
     font-size: 1.5em;
-    font-weight: bold;
+     font-weight: bold; 
     text-decoration: none;
     
     /* position the text centrally*/
@@ -164,12 +163,32 @@ input {
         opacity: 1; /*hover상태일때*/
     }
 .item-wrap2{
-    margin: 0 auto;
-    width: 300px;  
-    margin-left: 300px;
+    margin: 0 80px;
+    width: 300px;      
+    /* margin-left: 300px; */
     display: inline-block;
   }
-  
+
+table.type5 {
+  border-collapse: collapse;
+  text-align: left;
+  line-height: 1.5;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 10px;
+}
+table.type5 tbody th {
+  width: 150px;
+  padding: 10px;
+}
+table.type5 td {
+  width: 350px;
+  padding: 10px;
+  vertical-align: top;
+}
+table.type5 .even {
+  background: #eaf1ff;
+}
 .item-wrap .item{
     display: inline-block; 
     width: 23%; /*100% */
@@ -182,7 +201,6 @@ input {
     padding: 50px 0;
     font-size: 1.5em;
 }
-
 .dim {
     display: none;
     position: fixed;
@@ -193,7 +211,6 @@ input {
     background: rgba(0,0,0,.5);
     z-index: 100;
 }
-
 .layer-popup {
     position: fixed;
     border: 1px solid #000;
@@ -311,8 +328,11 @@ input {
     text-align: center;
     height: 60px;
     background-color: #ccc;   
-    clear: both;
-    font: bold;
+    clear: both;    
+    padding:5px;
 }
-
+.footer p {
+	padding:15px;
+	font-size:17px;	
+}
 

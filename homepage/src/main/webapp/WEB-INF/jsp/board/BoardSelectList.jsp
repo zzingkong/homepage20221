@@ -27,10 +27,31 @@
 <link href="/asset/BBSTMP_0000000000001/style.css" rel="stylesheet"/>
 <!-- 공통 style -->
 <link href="/asset/LYTTMP_0000000000000/style.css" rel="stylesheet"/>
+<link href="/asset/front/style.css" rel="stylesheet"/>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/asset/front/style.css">
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 <body>
-
+<div id="header">
+        <h1 class="logo"><img src="/asset/front/images/logo_03.png" alt="sunnymusic"></h1>
+        <nav class="gnb">
+            <ul>
+                <li><a href="/board/selectList.do">공지사항</a></li>                	
+                <li>
+                	<c:choose>
+						<c:when test="${empty USER_INFO.id}">
+							<a href="/login/actionLogin.do" class="login">로그인</a>	
+						</c:when>
+						<c:otherwise>
+							<a href="/login/actionLogout.do"><c:out value="${USER_INFO.name}"/>님 로그아웃</a>
+						</c:otherwise>
+					</c:choose>
+                </li>
+            </ul>
+        </nav>
+     </div>
 <div class="container">
 	<div id="contents">
 		<%-- 검색영역 --%>

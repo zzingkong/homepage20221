@@ -20,7 +20,8 @@
 </head>
 <body>
     <section class="slider">  
-        <div id="header">
+
+	 <div id="header">
         <h1 class="logo"><img src="/asset/front/images/logo_03.png" alt="sunnymusic"></h1>
         <nav class="gnb">
             <ul>
@@ -38,15 +39,23 @@
             </ul>
         </nav>
      </div>
-        <div class="sl-txt">
+     	
+     <div class="sl-txt">
         <div><h2>오늘 너의 기분은 어때?</h2></div><br>
+        	<form id="list_action" action="/music/musicList.do">        	
         	<div class="main_search">
-            	<input type="text" placeholder="기분입력">
-           		<span><a href="/board/musicList.do"><img class="search2" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"></a></span>           	
+            	<input type="text" placeholder="기분입력" name="musicTitle">
+           		<span id="action"><img class="search2" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"></span>           	
         		<span class="tag">#행복</span>    
         		<span class="tag">#우울</span>  
-        		<span class="tag">#슬픔</span>     
+        		<span class="tag">#슬픔</span> 
     		<div>        
+       		</form> 
+       		<script type="text/javascript"> 
+       			document.querySelector('#action').onclick=function(){
+       				document.querySelector('#list_action').submit();
+       			}
+       		</script>   
         </div>
     </section>
     <section class="content">       
@@ -63,12 +72,35 @@
         </div>     
         <div class="item-wrap2">            
             <h3 class="m_title">인기순위차트</h3>
+            <table class="type5">
+				  <tr>
+				    <th scope="row">1</th>
+				    <td>팡파레</td>
+				  </tr>
+				  <tr>
+				    <th scope="row" class="even">2</th>
+				    <td class="even">우연히 봄</td>
+				  </tr>
+				  <tr>
+				    <th scope="row">3</th>
+				    <td>밥만잘먹더라</td>
+				  </tr>
+				  <tr>
+				    <th scope="row" class="even">4</th>
+				    <td class="even">사랑했나봐</td>
+				  </tr>
+				   <tr>
+				    <th scope="row">5</th>
+				    <td>무릎</td>
+				  </tr>
+				  <tr>
+				    <th scope="row" class="even">6</th>
+				    <td class="even">사랑인가봐</td>
+				  </tr>
+				  </tbody>
+				</table>
        </div> 
     </section>
-
-    <footer class="footer">
-        <p>@ music is the medicine of a troubled mind </p>
-    </footer>
 
 <div class="dim"></div>
 <!-- 로그인 -->
@@ -95,6 +127,8 @@
 		</form>
 	</div>
 </div>
+
+<%@ include file="/WEB-INF/jsp/main/Footer.jsp"%>
 <script>
 $(document).ready(function() {
 	//로그인
