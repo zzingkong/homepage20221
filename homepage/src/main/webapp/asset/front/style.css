@@ -38,12 +38,6 @@ input[type=tel] {
 
 /*======= 초기화 코드 끝 ==========*/
 
-#header{
-    width: 1200px;
-    height: 100px;
-    margin: 0 auto; /*가운데 배치*/
-
-}
 #header .logo{
     float: left;
     padding-top: 10px; 
@@ -70,12 +64,12 @@ input[type=tel] {
     font-size: 25px;
     text-align: center;
     padding-top: 100px; 
-    font-family: 'Nanum Pen Script', cursive;   
+    font-family: 'Gamja Flower', cursive;  
 }
 .main_search {
     position: relative;
     width: 500px;
-    margin-left: 35%;
+    margin-left: 38%;
   }
   
 input {
@@ -175,16 +169,20 @@ table.type5 {
   line-height: 1.5;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  margin: 20px 10px;
+  margin: 20px 10px; 
 }
 table.type5 tbody th {
   width: 150px;
   padding: 10px;
+  font-weight: 600; 
+  text-align:center;
 }
 table.type5 td {
   width: 350px;
   padding: 10px;
   vertical-align: top;
+  font-weight: 600; 
+  padding: 15 30px;  
 }
 table.type5 .even {
   background: #eaf1ff;
@@ -323,6 +321,90 @@ table.type5 .even {
 .layer-login .layer-body fieldset .btn-login:hover {
 	background: #f8da07
 }
+/* main page 끝 */
+
+/*music list*/
+.background-img {
+    background-image: url(images/detail.png);    
+    background-size: cover;   /*이미지의 가로 세율 비율을 유지한 상태로 화면을 꽉 채우게 됨*/
+    background-position: center top;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* 이미지의 높이를 화면의 높이만큼 지정*/
+    width: 100%;
+} 
+#header{
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto; /*가운데 배치*/
+}
+#header .logo{
+  float: left;
+  padding-top: 20px; 
+}
+#table_style {
+    padding: 10px; 
+    width: 100%;    
+}
+  
+.result {  
+    text-align: center;
+    margin: auto;
+    padding: 11px;
+    border: 1px solid;
+    width: 650px;    
+    height: 33px;
+    background: white;
+    border-radius: 15px;
+    font-family: 'Gamja Flower' cursive;  
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 30px;
+} 
+.result .caption {
+	 margin-left:30%;
+}
+.list {  
+  border-top: 1px solid #444444;
+  margin-left:30%;
+  margin-right:30%; 
+  background: white;
+  border-collapse: collapse; 
+  line-height: 1.5; 
+  margin: 0 auto;
+  text-align: center; 
+} 
+.th1, .th {
+  border-bottom: 1px solid #444444;
+  width: 200px;
+  padding:10px; 
+  background-color: #a9c4ec;
+  color: #ffffff;
+}
+.th1 {
+  width: 50px;
+}
+
+.td {   
+  height: 60px;   
+}
+tr {
+  height: 60px;    
+} 
+
+.tr:nth-child(2n){
+  background-color: #bbdefb;
+  border-top: 1px solid #444444;
+  border-bottom: 1px solid #444444;
+  
+}
+.tr:nth-child(2n+1) {
+  background-color: #eaf1ff;
+  border-top: 1px solid #444444;
+  border-bottom: 1px solid #444444;
+}
+
+
+/*footer 시작*/
 
 .footer {
     text-align: center;
@@ -333,6 +415,7 @@ table.type5 .even {
 }
 .footer p {
 	padding:15px;
-	font-size:17px;	
+	font-size:17px;
+	font-family: 'Concert One', cursive;
 }
 

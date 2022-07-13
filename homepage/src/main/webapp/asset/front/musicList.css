@@ -1,0 +1,191 @@
+@charset "utf-8";
+html {width:100%;height:100%;margin:0}
+body {position:relative;font-size:14px;font-family:"dotum";color:#515151;margin:0; padding:0;width:100%; height: 100%; }
+h1,h2,h3,h4,h5,h6,ol,ul,li,form,fieldset,input,select,textarea,p,th,td,dt,dd,dl,p,figure {margin:0;padding:0;}
+h1,h3,h4,h5,h6 {font-size:14px;}
+h2{	font-size:50px;	}
+li {list-style-type:none;}
+img,fieldset {border:0;}
+em {font-style:normal;}
+input.radio {width:13px; height:13px; vertical-align:middle;}
+a {text-decoration:none; color:#ffffff; }
+/* a:hover {color:#06bbf7;} */
+address,em,i {font-style:normal;}
+.hdn, legend{font-size:0; height:0; overflow:hidden; position:absolute;visibility:hidden; width:0; line-height:0;}
+table caption.hdn{font-size:0; height:0; overflow:hidden; position:static;visibility:hidden; width:0; line-height:0;}
+table { border-spacing: 0; border-collapse:collapse; }
+caption, legend { display: none; }
+button {border:0;cursor:pointer;background:none;}
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=email],
+input[type=tel] {
+    font-size: 16px;
+    vertical-align: middle;
+    padding: 0 15px;
+    height: 50px;
+    border: 1px solid #ddd;
+    width: 500px;
+    box-sizing: border-box;
+    transition: box-shadow .3s, border-color .3s;
+}
+
+/*  skipnavi */
+#skilNavi a.skipBtn {display:block; height:0; width:100%; position:absolute; text-align:center; top:0; left:0; overflow:hidden;}
+#skilNavi a.skipBtn:focus, #skilNavi a.skipBtn:active  {display:block; position:relative; color:white; font-weight:bold; height:20px; background:black;}
+
+
+/*======= 초기화 코드 끝 ==========*/
+
+#header .logo{
+    float: left;
+    padding-top: 10px; 
+}
+#header .gnb{
+    float: right;
+}
+#header .gnb li {
+    display: inline-block;
+    padding: 34px 20px;
+    color: #ffffff;   
+}
+#header .gnb li a:hover {
+ color:#06bbf7;
+ }
+  
+.slider {
+    background-image: url(/asset/front/images/detail.png);    
+    background-size: cover;   /*이미지의 가로 세율 비율을 유지한 상태로 화면을 꽉 채우게 됨*/
+    background-position: center top;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* 이미지의 높이를 화면의 높이만큼 지정*/
+    width: 100%;
+} 
+#header{
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto; /*가운데 배치*/
+}
+#header .logo{
+  float: left;
+  padding-top: 20px; 
+}
+#table_style {
+    padding: 0 10px; 
+    width: 100%;  
+    padding-top: 4px  
+}
+  
+.result {  
+    text-align: center;
+    margin: auto;
+    padding: 11px;   
+    width: 650px;    
+    height: 15px;  
+    font-family: 'Gamja Flower' cursive;  
+    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Nanum Pen Script', cursive;
+    font-size: 50px;
+    color:#ffff09;
+ 
+} 
+.c {
+	 margin-left:33%;
+	 margin-top:32px;	 
+	 color: #ffffff;
+}
+.list {  
+  border-top: 1px solid #444444;
+  margin-left:30%;
+  margin-right:30%; 
+  background: white;
+  border-collapse: collapse; 
+  line-height: 1.5; 
+  margin: 0 auto;
+  text-align: center; 
+} 
+.th1, .th {
+  border-bottom: 1px solid #444444;
+  width: 200px;
+  padding:10px; 
+  background-color: #12376e;
+  color: #ffffff;
+  font-family: 'Nanum Gothic', sans-serif; 
+  font-family: 'Nanum Pen Script', cursive;
+  font-size:25px;
+  }
+.th1 {
+  width: 50px;
+}
+
+.td {   
+  height: 60px; 
+  font-weight: 600;  
+}
+tr {
+  height: 60px;    
+} 
+
+.tr:nth-child(2n){
+  background-color: #bbdefb;
+  border-top: 1px solid #444444;
+  border-bottom: 1px solid #444444;
+  
+}
+.tr:nth-child(2n+1) {
+  background-color: #eaf1ff;
+  border-top: 1px solid #444444;
+  border-bottom: 1px solid #444444;
+}
+#paging {
+    width: 100%;
+    color: #ffff;
+    font-style: normal;
+    margin: 30px 0 30px;
+    font-weight: bold;
+    text-align: center;
+}
+#paging .current {
+    display: inline-block;
+    background:#fff;
+    border: none;
+    color: #343a40;
+    width: 31px;
+    height: 31px;
+    line-height: 31px;
+    vertical-align: middle;
+    border-radius: 1px;
+    border-radius: 2px;
+}
+#paging a {
+    display: inline-block;
+    width: 31px;
+    height: 31px;
+    line-height: 31px;
+    vertical-align: middle;
+    border: none;
+    margin: 0 3px 0 2px;
+    font-size: 14px;
+    color: #000;
+    border-radius: 1px;
+    border-color: #fff;
+}
+a {
+	text-decoration:none;
+}
+
+/*footer 시작*/
+
+.footer {
+    text-align: center;
+    height: 60px;
+    background-color: #ccc;   
+    clear: both;    
+    padding:5px;
+}
+.footer p {
+	padding:15px;
+	font-size:17px;	
+}
+

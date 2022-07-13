@@ -28,11 +28,13 @@ implements MusicService {
 		return musicMapper.selectMusicList(vo);
 	}
 	
-	//게시물 목록 수
+	//임시데이터 목록 수
 	public int selectMusicListCnt(MusicVO vo) throws Exception {
 		return musicMapper.selectMusicListCnt(vo);
- 
-	}
+ 	}	
+	
+	
+	
 //	//게시물 등록
 //	@Override
 //	public String insertMusic(MusicVO vo) throws Exception { 

@@ -15,7 +15,8 @@ public interface MusicMapper {
 		
 	   //게시물 목록 수 
 		int selectMusicListCnt(MusicVO vo) throws Exception;
-//		
+	
+			
 //	   //게시물 등록 수 
 //		void insertMusic(MusicVO vo) throws Exception;
 //	

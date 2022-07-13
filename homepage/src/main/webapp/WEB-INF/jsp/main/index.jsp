@@ -6,8 +6,8 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Gothic:wght@700;800&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,7 +44,7 @@
         <div><h2>오늘 너의 기분은 어때?</h2></div><br>
         	<form id="list_action" action="/music/musicList.do">        	
         	<div class="main_search">
-            	<input type="text" placeholder="기분입력" name="musicTitle">
+            	<input type="text" placeholder="검색" name="musicTitle">
            		<span id="action"><img class="search2" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"></span>           	
         		<span class="tag">#행복</span>    
         		<span class="tag">#우울</span>  
@@ -66,7 +66,7 @@
 		        <span><img src="../../../asset/front/images/IDLE.JPG"><a class="sec" href="">IDLE</a></span>
 		        <span><img src="../../../asset/front/images/Im.JPG"><a class="thi" href="">Im</a></span>
 		        <span><img src="../../../asset/front/images/IVE.JPG"><a class="for" href="">IVE</a></span>
-		        <span><img src="../../../asset/front/images/BTS.JPG"><a class="fif" href="">BTS</a></span>
+		        <span><img src="../../../asset/front/images/BTS.JPG"><a class="fif" href="/music/musicselectList.do">BTS</a></span>
 		        <span><img src="../../../asset/front/images/MeloMance.JPG"><a class="six" href="">MeloMance</a></span>  
 	   		 </span>
         </div>     
@@ -93,10 +93,7 @@
 				    <th scope="row">5</th>
 				    <td>무릎</td>
 				  </tr>
-				  <tr>
-				    <th scope="row" class="even">6</th>
-				    <td class="even">사랑인가봐</td>
-				  </tr>
+				 
 				  </tbody>
 				</table>
        </div> 

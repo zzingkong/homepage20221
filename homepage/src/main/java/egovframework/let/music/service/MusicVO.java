@@ -2,7 +2,11 @@
 
 package egovframework.let.music.service;
 
-public class MusicVO {
+import java.io.Serializable;
+
+import egovframework.com.cmm.ComDefaultVO;
+
+public class MusicVO extends ComDefaultVO implements Serializable{
 	
 	private int musicId;
 	private String musicTitle;
@@ -39,5 +43,5 @@ public class MusicVO {
 	public void setRecommenCo(int recommenCo) {
 		this.recommenCo = recommenCo;
 	}
-		
+			
 }

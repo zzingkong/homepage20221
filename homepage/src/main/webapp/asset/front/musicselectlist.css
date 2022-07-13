@@ -1,0 +1,119 @@
+@charset "utf-8";
+html {width:100%;height:100%;margin:0}
+body {position:relative;font-size:14px;font-family:"dotum";color:#515151;margin:0; padding:0;width:100%; height: 100%; }
+h1,h2,h3,h4,h5,h6,ol,ul,li,form,fieldset,input,select,textarea,p,th,td,dt,dd,dl,p,figure {margin:0;padding:0;}
+h1,h3,h4,h5,h6 {font-size:14px;}
+h2{	font-size:50px;	}
+li {list-style-type:none;}
+img,fieldset {border:0;}
+em {font-style:normal;}
+input.radio {width:13px; height:13px; vertical-align:middle;}
+a {text-decoration:none; color:#ffffff; }
+/* a:hover {color:#06bbf7;} */
+address,em,i {font-style:normal;}
+.hdn, legend{font-size:0; height:0; overflow:hidden; position:absolute;visibility:hidden; width:0; line-height:0;}
+table caption.hdn{font-size:0; height:0; overflow:hidden; position:static;visibility:hidden; width:0; line-height:0;}
+table { border-spacing: 0; border-collapse:collapse; }
+caption, legend { display: none; }
+button {border:0;cursor:pointer;background:none;}
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=email],
+input[type=tel] {
+    font-size: 16px;
+    vertical-align: middle;
+    padding: 0 15px;
+    height: 50px;
+    border: 1px solid #ddd;
+    width: 500px;
+    box-sizing: border-box;
+    transition: box-shadow .3s, border-color .3s;
+}
+
+/*  skipnavi */
+#skilNavi a.skipBtn {display:block; height:0; width:100%; position:absolute; text-align:center; top:0; left:0; overflow:hidden;}
+#skilNavi a.skipBtn:focus, #skilNavi a.skipBtn:active  {display:block; position:relative; color:white; font-weight:bold; height:20px; background:black;}
+
+
+/*======= 초기화 코드 끝 ==========*/
+#header{
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto; /*가운데 배치*/
+}
+#header .logo{
+  float: left;
+  padding-top: 20px; 
+}
+
+#header .gnb{
+    float: right;
+    margin: 3px;
+}
+#header .gnb li {
+    display: inline-block;
+    padding: 34px 20px;
+    color: #ffffff;   
+}
+#header .gnb li a{
+	text-decoration:none;
+}
+#header .gnb li a:hover {
+ color:#06bbf7; 
+ }
+ 
+/*musicselectlist page*/
+.box {
+    border: 1px solid black;
+    width: 700px;   
+    height: 250px;
+    margin-bottom: 20px;
+    margin-left: 30%;
+    
+    }
+.song_name {
+    margin: 5px;
+    margin-left: 30%;    
+}
+.music_detail {
+    text-align: center;
+    
+}
+.box2 {
+    border: 1px solid black;
+    position:absolute ; right:0;
+    width: 450px;
+}
+.album {
+    display: inline;
+    float: left;
+}
+.box .text {
+    display: inline-block;
+    padding-left: 20px;
+    padding-top: 10px;
+}  
+.album img{
+    height: 250px;
+    width: 250px;    
+} 
+table {
+    margin-left: 30%;
+    width: 700px;
+    border-top: 1px solid #444444;
+    border-collapse: collapse;
+  }
+.music_detail tr,th,td {
+    border-bottom: 1px solid black;    
+    padding: 10px;
+  }
+.music_detail th:first-child, td:first-child {
+    border-left: none;
+  }
+.pagination {
+    margin-left: 43%;
+    margin-top: 30px;
+  }
+
+

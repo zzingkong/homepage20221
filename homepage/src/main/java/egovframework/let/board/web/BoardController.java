@@ -53,18 +53,19 @@ public class BoardController {
 		paginationInfo.setRecordCountPerPage(searchVO.getPageUnit()); // 한 페이지당 게시되는 게시물 건 수
 		paginationInfo.setPageSize(searchVO.getPageSize()); // 페이지 리스트에 게시되는 페이지 건수
 		
+		//쿼리에 쓸 것 
 		searchVO.setFirstIndex(paginationInfo.getFirstRecordIndex());
 		searchVO.setLastIndex(paginationInfo.getLastRecordIndex());
 		searchVO.setRecordCountPerPage(paginationInfo.getRecordCountPerPage());
 		
 		searchVO.setNoticeAt("N");
-		List<EgovMap> resultList = boardService.selectBoardList(searchVO);
-		model.addAttribute("resultList", resultList);
-		
 		int totCnt = boardService.selectBoardListCnt(searchVO);
 		
 		paginationInfo.setTotalRecordCount(totCnt); // 전체 게시물 건 수
 		model.addAttribute("paginationInfo", paginationInfo);
+		
+		List<EgovMap> resultList = boardService.selectBoardList(searchVO);
+		model.addAttribute("resultList", resultList);
 		
 		LoginVO user = (LoginVO)EgovUserDetailsHelper.getAuthenticatedUser();
 		model.addAttribute("USER_INFO", user);

@@ -10,8 +10,8 @@ public interface MusicService {
 	//게시물 목록 가져오기
 	public List<EgovMap> selectMusicList(MusicVO vo) throws Exception;
 		
-//	//게시물 목록 수
-//	public int selectMusicListCnt(MusicVO vo) throws Exception;
+	//게시물 목록 수
+	public int selectMusicListCnt(MusicVO vo) throws Exception;
 //	
 //	//게시물 등록하기
 //	public String insertMusic(MusicVO vo) throws Exception;

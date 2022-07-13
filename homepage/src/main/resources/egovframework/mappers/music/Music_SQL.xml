@@ -21,16 +21,16 @@
 	 SELECT MUSIC_ID, MUSIC_TITLE, LIST_ARTIST, LIST_NAME, RECOMMEN_CO
 	 FROM homepage_db.music	
 	 WHERE MUSIC_TITLE=#{musicTitle}
+	 LIMIT #{recordCountPerPage} OFFSET #{firstIndex}
 	</select>
-	
-	
-
-	<select id="selectMusicListCnt" resultType="java.lang.Integer">
-  		SELECT 
-  			COUNT(*) CNT
-  			FROM BOARD A
-  			<!-- <include refid="selectBoardListWhere"></include>  	 -->
- 	</select> 
+		
+ 	
+ 	<select id="selectMusicListCnt" resultType="java.lang.Integer">
+    SELECT 
+     COUNT(*) CNT
+     FROM music
+     </select>
+ 	
  	
  	<!-- include문을 왜 빼서 따로 썼을까? 위에 공통으로 쓰는 부분이 있어서 뺐음-->
  <!-- 	<sql id="selectBoardListWhere">  
