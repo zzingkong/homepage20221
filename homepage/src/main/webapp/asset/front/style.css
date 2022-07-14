@@ -8,7 +8,7 @@ li {list-style-type:none;}
 img,fieldset {border:0;}
 em {font-style:normal;}
 input.radio {width:13px; height:13px; vertical-align:middle;}
-a {text-decoration:none; color:#ffffff; }
+/* a {	text-decoration:none; color:#ffffff; } */
 /* a:hover {color:#06bbf7;} */
 address,em,i {font-style:normal;}
 .hdn, legend{font-size:0; height:0; overflow:hidden; position:absolute;visibility:hidden; width:0; line-height:0;}
@@ -50,8 +50,18 @@ input[type=tel] {
     padding: 34px 20px;
     color: #ffffff;   
 }
+
+#header .gnb li a{
+	text-decoration: none;
+    color: white;       
+    border: 1px solid;
+    padding: 7px;
+    border-radius: 15px;
+    font-family: 'Concert One';
+}
+
 #header .gnb li a:hover {
- color:#06bbf7;
+    color:#06bbf7;     
  }
   
 .slider {
@@ -61,10 +71,29 @@ input[type=tel] {
 }
 .slider .sl-txt {
     color:#ffffff;
-    font-size: 25px;
+    font-size: 50px;
     text-align: center;
     padding-top: 100px; 
     font-family: 'Gamja Flower', cursive;  
+}
+.typing-txt{
+	display: none;
+}
+.typeing-txt ul{
+	list-style:none;
+}
+.typing {  
+  display: inline; 
+  animation-name: cursor; 
+  animation-duration: 0.3s; 
+  animation-iteration-count: infinite; 
+  font-size: 50px;
+  line-height:1;
+} 
+@keyframes cursor{ 
+  0%{border-right: 1px solid #fff} 
+  50%{border-right: 1px solid #000} 
+  100%{border-right: 1px solid #fff} 
 }
 .main_search {
     position: relative;

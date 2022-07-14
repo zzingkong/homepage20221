@@ -7,7 +7,7 @@
 
 <%--기본url --%>
 <c:url var="_BASE_PARAM" value="">	
-	<c:param name="menuNo" value="50"/>
+	<c:param name="musicTitle" value="${vo.musicTitle}"/>
 	<c:if test="${not empty vo.searchCondition}">
 		<c:param name="searchCondition" value="${vo.searchCondition}"/>
 	</c:if>
@@ -51,10 +51,10 @@
      </div>
  <div class="background-img">
  
-    <div class="result">'기쁨'에 대한 검색 결과입니다</div>
-	    <div class="c">
+    <div class="result">'<c:out value="${vo.musicTitle}"/>'에 대한 검색 결과입니다</div>
+	    <%-- <div class="c">
 			 게시물 총수: <c:out value="${paginationInfo.totalRecordCount}"/>건
-	    </div>
+	    </div> --%>
 	    <div id="table_style">       
 	    <table class="list"> 
 	       	<thead>
@@ -66,12 +66,21 @@
 		        </tr>
 	        </thead>
 	        <tbody>
-	        	<c:forEach var="vo" items="${MusicList}" varStatus="status">
+	        	<c:forEach var="v" items="${MusicList}" varStatus="status">
 	        		<tr class="tr">
-			            <td class="td">${status.count}</td>
-			            <td class="td"><c:out value="${vo.listArtist}"/></td>
-			            <td class="td"><c:out value="${vo.listName}"/></td>
-			            <td class="td"><img src="/asset/front/images/f_heart2.png"></td>
+			            <td class="td">${(vo.pageIndex-1)*10+status.count}</td>
+			            <td class="td"><c:out value="${v.listArtist}"/></td>
+			            <td class="td"><c:out value="${v.listName}"/></td>
+			            <td class="td">
+			            	<img id="heart" src="/asset/front/images/heart2.png">
+							     <script type="text/javascript">       
+							       // 객체 변수 함수 이벤트 조건 반복 배열
+							        heart.onclick = function() 
+							        {
+							    	   heart.src = "/asset/front/images/f_heart2.png";
+							        } 
+    							</script>   
+			            </td>
 			        </tr>
 	        	</c:forEach>
 		</tbody>

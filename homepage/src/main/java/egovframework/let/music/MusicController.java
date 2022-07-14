@@ -34,7 +34,7 @@ public class MusicController {
 		vo.setFirstIndex(paginationInfo.getFirstRecordIndex());
 		vo.setLastIndex(paginationInfo.getLastRecordIndex());
 		vo.setRecordCountPerPage(paginationInfo.getRecordCountPerPage());
-	
+		//totalcount 건
 		int totCnt = musicService.selectMusicListCnt(vo);
 	
 		paginationInfo.setTotalRecordCount(totCnt);

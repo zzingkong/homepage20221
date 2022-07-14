@@ -240,7 +240,7 @@ table.file_list_chart tbody td.del { text-align:center;width:50px; }
 
 /* label */
 .label-bbs { display:inline-block;height:20px;line-height:20px;background:#aaa;color:#fff;font-size:11px;font-family:Daum;padding:0 5px; }
-.label-bbs.spot { background:#c000c0; }
+.label-bbs.spot { background:#f17f0a; }
 .label-bbs.spot2 { background:#ff9f00; }
 
 .comtneduprgVO .txt { width:100%; }

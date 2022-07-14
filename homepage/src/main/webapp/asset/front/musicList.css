@@ -50,6 +50,14 @@ input[type=tel] {
     padding: 34px 20px;
     color: #ffffff;   
 }
+#header .gnb li a{
+	text-decoration: none;
+    color: white;       
+    border: 1px solid;
+    padding: 7px;
+    border-radius: 15px;
+    font-family: 'Concert One';
+}
 #header .gnb li a:hover {
  color:#06bbf7;
  }
@@ -74,7 +82,7 @@ input[type=tel] {
 #table_style {
     padding: 0 10px; 
     width: 100%;  
-    padding-top: 4px  
+    padding-top: 52px  
 }
   
 .result {  
@@ -128,7 +136,7 @@ tr {
 } 
 
 .tr:nth-child(2n){
-  background-color: #bbdefb;
+  background-color: #ffffff;
   border-top: 1px solid #444444;
   border-bottom: 1px solid #444444;
   
@@ -167,7 +175,7 @@ tr {
     border: none;
     margin: 0 3px 0 2px;
     font-size: 14px;
-    color: #000;
+    color: #e0e0e0;
     border-radius: 1px;
     border-color: #fff;
 }

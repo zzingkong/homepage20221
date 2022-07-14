@@ -26,9 +26,11 @@
 		
  	
  	<select id="selectMusicListCnt" resultType="java.lang.Integer">
-    SELECT 
+     SELECT 
      COUNT(*) CNT
-     FROM music
+     FROM homepage_db.music
+     WHERE MUSIC_TITLE=#{musicTitle}
+     
      </select>
  	
  	
