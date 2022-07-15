@@ -22,7 +22,7 @@
 
 <body>
     <div id="header">
-        <h1 class="logo"><img src="../../../asset/front/images/logo_03.png" alt="sunnymusic"></h1>
+        <h1 class="logo"><a href="/index.do"><img src="../../../asset/front/images/logo_03.png" alt="sunnymusic"></a></h1>
         <nav class="gnb">
             <ul>
                 <li><a href="/board/selectList.do">공지사항</a></li>
@@ -80,7 +80,7 @@
                 <td>1</td>
                 <td>DNA</td>
                 <td>   
-	               <img src="../../../asset/front/images/heart2.JPG" id="pic">
+	               <img src="../../../asset/front/images/heart2.png" id="pic">
 	                     <script type="text/javascript">
 	                        $(function (){
 	                            let num=0;

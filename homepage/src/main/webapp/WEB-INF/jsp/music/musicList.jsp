@@ -28,11 +28,12 @@
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Gothic:wght@700;800&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/asset/front/musicList.css?aa">  
+<script src="/js/jquery-3.6.0.js"></script>
 </head>
 <body>
 <section class="slider"> 
     <div id="header">
-         <h1 class="logo"><img src="/asset/front/images/logo_03.png" alt="sunnymusic"></h1>
+         <h1 class="logo"><a href="/index.do"><img src="/asset/front/images/logo_03.png" alt="sunnymusic" ></a></h1>
         <nav class="gnb">
             <ul>
                 <li><a href="/board/selectList.do">공지사항</a></li>                	
@@ -72,20 +73,30 @@
 			            <td class="td"><c:out value="${v.listArtist}"/></td>
 			            <td class="td"><c:out value="${v.listName}"/></td>
 			            <td class="td">
-			            	<img id="heart" src="/asset/front/images/heart2.png">
-							     <script type="text/javascript">       
-							       // 객체 변수 함수 이벤트 조건 반복 배열
-							        heart.onclick = function() 
-							        {
-							    	   heart.src = "/asset/front/images/f_heart2.png";
-							        } 
-    							</script>   
+			            	<img class="heart" src="/asset/front/images/heart2.png">
 			            </td>
 			        </tr>
 	        	</c:forEach>
-		</tbody>
-	  </table>
-	</div>
+							     <script type="text/javascript">       
+							       // 객체 변수 함수 이벤트 조건 반복 배열
+							       /*  heart.onclick = function() 
+							        {							    	  
+  	  							      heart.src = "/asset/front/images/f_heart2.png";
+  	  							    	   
+							        }  */
+							       $('.heart').on("click",function(){
+							    	   $(this).toggleClass("on");
+							    	   if($(this).hasClass("on")){
+// 							    	   if(this.src == 'http://localhost/asset/front/images/heart2.png'){
+							    		  this.src = "/asset/front/images/f_heart2.png";
+							    	   } else {
+							    		   this.src = "/asset/front/images/heart2.png";
+							    	   }
+							       });
+    							</script>   
+					</tbody>
+				  </table>
+				</div>
 </div>
  <!--페이징 소스 --> 
  <div id="paging">
