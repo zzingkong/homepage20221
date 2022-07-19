@@ -17,7 +17,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    
+    <script src="/js/jquery-3.6.0.js"></script>
 </head>
 
 <body>
@@ -80,49 +80,127 @@
                 <td>1</td>
                 <td>DNA</td>
                 <td>   
-	               <img src="../../../asset/front/images/heart2.png" id="pic">
-	                     <script type="text/javascript">
-	                        $(function (){
-	                            let num=0;
-	                            let imageName = [heart2,f_heart2];
-	                            $("#pic").click(function(){
-	                                if(num == 2) num =0;
-	                                else num++;
-	                                $(this).attr("src","../../../asset/front/images/f_heart2.png"+imageName[num]+".png");
-	                            });
-	                        });
-	                     </script>
+	              	<img class="heart" src="/asset/front/images/heart2.png">
+	                      <script type="text/javascript"> 
+	                      
+							       $('.heart').on("click",function(){
+							    	   $(this).toggleClass("on");
+							    	   if($(this).hasClass("on")){
+							    		  this.src = "/asset/front/images/f_heart2.png";
+							    	   } else {
+							    		   this.src = "/asset/front/images/heart2.png";
+							    	   }
+							       });
+   							</script>  
                  </td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>보조개</td>
-                <td><img src="../../../asset/front/images/heart2.JPG"></td>
+                <td>
+                  <img class="heart" src="/asset/front/images/heart2.png">
+	                      <script type="text/javascript"> 
+	                      
+							       $('.heart').on("click",function(){
+							    	   $(this).toggleClass("on");
+							    	   if($(this).hasClass("on")){
+							    		  this.src = "/asset/front/images/f_heart2.png";
+							    	   } else {
+							    		   this.src = "/asset/front/images/heart2.png";
+							    	   }
+							       });
+   							</script>  
+                </td>
             </tr>
             <tr>
                 <td>3</td>
                 <td>Her</td>
-                <td><img src="../../../asset/front/images/f_heart2.png"></td>
+                <td>
+                 <img class="heart" src="/asset/front/images/heart2.png">
+	                      <script type="text/javascript"> 
+	                      
+							       $('.heart').on("click",function(){
+							    	   $(this).toggleClass("on");
+							    	   if($(this).hasClass("on")){
+							    		  this.src = "/asset/front/images/f_heart2.png";
+							    	   } else {
+							    		   this.src = "/asset/front/images/heart2.png";
+							    	   }
+							       });
+   							</script>  
+                </td>
             </tr>
             <tr>
                 <td>4</td>
                 <td>Ipsum</td>
-                <td><img src="../../../asset/front/images/f_heart2.png"></td>
+                <td>
+                  <img class="heart" src="/asset/front/images/heart2.png">
+	                      <script type="text/javascript"> 
+	                      
+							       $('.heart').on("click",function(){
+							    	   $(this).toggleClass("on");
+							    	   if($(this).hasClass("on")){
+							    		  this.src = "/asset/front/images/f_heart2.png";
+							    	   } else {
+							    		   this.src = "/asset/front/images/heart2.png";
+							    	   }
+							       });
+   							</script>  
+                </td>
             </tr>
             <tr>
                 <td>5</td>
                 <td>Tear</td>
-                <td><img src="../../../asset/front/images/f_heart2.png"></td>
+                <td>
+                  <img class="heart" src="/asset/front/images/heart2.png">
+	                      <script type="text/javascript"> 
+	                      
+							       $('.heart').on("click",function(){
+							    	   $(this).toggleClass("on");
+							    	   if($(this).hasClass("on")){
+							    		  this.src = "/asset/front/images/f_heart2.png";
+							    	   } else {
+							    		   this.src = "/asset/front/images/heart2.png";
+							    	   }
+							       });
+   							</script>  
+                </td>
             </tr>
             <tr>
                 <td>6</td>
                 <td>불타오르네</td>
-                <td><img src="../../../asset/front/images/heart2.JPG"></td>
+                <td>
+                	<img class="heart" src="/asset/front/images/heart2.png">
+	                      <script type="text/javascript"> 
+	                      
+							       $('.heart').on("click",function(){
+							    	   $(this).toggleClass("on");
+							    	   if($(this).hasClass("on")){
+							    		  this.src = "/asset/front/images/f_heart2.png";
+							    	   } else {
+							    		   this.src = "/asset/front/images/heart2.png";
+							    	   }
+							       });
+   							</script>                  
+                </td>
             </tr>
             <tr>
                 <td>7</td>
                 <td>butter</td>
-                <td><img src="../../../asset/front/images/heart2.JPG"></td>
+                <td>
+                	<img class="heart" src="/asset/front/images/heart2.png">
+	                      <script type="text/javascript"> 
+	                      
+							       $('.heart').on("click",function(){
+							    	   $(this).toggleClass("on");
+							    	   if($(this).hasClass("on")){
+							    		  this.src = "/asset/front/images/f_heart2.png";
+							    	   } else {
+							    		   this.src = "/asset/front/images/heart2.png";
+							    	   }
+							       });
+   							</script>                  
+                </td>
             </tr>
     </table>
     <nav aria-label="Page navigation example">

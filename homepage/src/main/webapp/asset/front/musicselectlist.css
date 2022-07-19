@@ -57,7 +57,12 @@ input[type=tel] {
     color: #ffffff;   
 }
 #header .gnb li a{
-	text-decoration:none;
+	text-decoration: none;
+    color: #0808bb;
+    border: 1px solid;
+    padding: 7px;
+    border-radius: 15px;
+    font-family: 'Concert One';
 }
 #header .gnb li a:hover {
  color:#06bbf7; 
