@@ -257,6 +257,7 @@ public class EgovFileScrty {
 	
 		byte[] hashValue = null; // 해쉬값
 	
+		//sha-256 복호화 안되고 단방향임
 		MessageDigest md = MessageDigest.getInstance("SHA-256");
 		
 		md.reset();
