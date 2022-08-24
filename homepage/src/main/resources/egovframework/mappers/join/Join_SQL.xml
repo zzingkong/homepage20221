@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="egovframework.let.join.service.impl.JoinMapper">
 
-   <resultMap id="crud" type="egovframework.let.join.service.JoinVO">
+   <!-- <resultMap id="crud" type="egovframework.let.join.service.JoinVO">
       <result property="emplyrId" column="EMPLYR_ID"/>
       <result property="userNm" column="USER_NM"/>
       <result property="password" column="PASSWORD"/>  
@@ -11,11 +11,12 @@
       <result property="emplyrSttusCode" column="EMPLYR_STTUS_CODE"/>  
       <result property="esntlId" column="ESNTL_ID"/>  
       <result property="loginType" column="LOGIN_TYPE"/>  
-   </resultMap>
+   </resultMap> -->
    
    <insert id="insertJoin">
    	INSERT INTO LETTNEMPLYRINFO(
    		ESNTL_ID
+   		, EMPLYR_ID
    		, USER_NM
    		, PASSWORD
    		, PASSWORD_HINT
@@ -38,7 +39,7 @@
    		SELECT
    			COUNT(*) CNT
    		FROM LETTNEMPLYRINFO
-   		WHERE EMPLYR_ID #{emplyrId}  
+   		WHERE EMPLYR_ID= #{emplyrId}  
    </select>
       
   

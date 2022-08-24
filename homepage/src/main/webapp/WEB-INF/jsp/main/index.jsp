@@ -36,6 +36,9 @@
 						</c:otherwise>
 					</c:choose>
                 </li>
+                <li>
+               	 <a href="/join/memberType.do">회원가입</a>	
+                </li>
             </ul>
         </nav>
      </div>
@@ -199,34 +202,38 @@
 </div>
 
 <%@ include file="/WEB-INF/jsp/main/Footer.jsp"%>
-<script>
-$(document).ready(function() {
-	//로그인
-	$(".login").click(function(){
-		$(".dim, .layer-login").fadeIn();
-		return false;
+	<script>
+	$(document).ready(function() {
+		//로그인
+		$(".login").click(function(){
+			$(".dim, .layer-login").fadeIn();
+			return false;
+		});
+		//레이어닫기
+		$(".layer-close").click(function(){
+			$(".dim, .layer-login").fadeOut();
+			return false;
+		});
 	});
-	//레이어닫기
-	$(".layer-close").click(function(){
-		$(".dim, .layer-login").fadeOut();
-		return false;
-	});
-});
-function vali() {
-	if(!$("#loginId").val()) {
-		alert("아이디를 입력해주세요.");
-		$("#loginId").focus();
-		return false;
+	function vali() {
+		if(!$("#loginId").val()) {
+			alert("아이디를 입력해주세요.");
+			$("#loginId").focus();
+			return false;
+		}
+		if(!$("#loginPw").val()) {
+			alert("비밀번호를 입력해주세요");
+			$("#loginPw").focus();
+			return false;
+		}
 	}
-	if(!$("#loginPw").val()) {
-		alert("비밀번호를 입력해주세요");
-		$("#loginPw").focus();
-		return false;
-	}
-}
-<c:if test ="${not empty loginMessage}">
-	alert("${loginMessage}");
-</c:if>
+	<c:if test ="${not empty loginMessage}">
+		alert("${loginMessage}");
+	</c:if>
+	<c:if test ="${not empty message}">
+		alert("${message}");
+	</c:if>
+
 </script>
 </body>
 </html>

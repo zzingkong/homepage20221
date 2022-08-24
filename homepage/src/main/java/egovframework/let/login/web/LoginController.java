@@ -27,13 +27,14 @@ public class LoginController {
 	//로그인
 	@RequestMapping(value = "login/actionLogin.do")
 	public String actionLogin(@ModelAttribute("loginVO") LoginVO loginVO, HttpServletRequest request, ModelMap model) throws Exception {
-		System.out.println(11);
+		
 			LoginVO resultVO = loginService.actionLogin(loginVO);
 			if (resultVO != null && resultVO.getId() != null && !resultVO.getId().equals("")) {
-				return "forward:/index.do";
+				request.getSession().setAttribute("LoginVO", resultVO);
+				return "redirect:/index.do";
 			}else {
 				model.addAttribute("loginMessage", egovMessageSource.getMessage("fail.common.login"));
-				return "forward:/index.do";		
+				return "redirect:/index.do";		
 				}	
 			}
 	//로그아웃

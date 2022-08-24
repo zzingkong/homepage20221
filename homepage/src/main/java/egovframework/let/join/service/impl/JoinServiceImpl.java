@@ -9,6 +9,8 @@ import egovframework.rte.fdl.idgnr.EgovIdGnrService;
 
 import javax.annotation.Resource;
 
+import org.springframework.stereotype.Service;
+@Service("joinService")
 public class JoinServiceImpl extends EgovAbstractServiceImpl 
 implements JoinService {
 	
