@@ -2,11 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>homepage</groupId>
-	<artifactId>homepage</artifactId>
+	<groupId>homepage2022</groupId>
+	<artifactId>homepage2022</artifactId>
 	<packaging>war</packaging>
 	<version>1.0.0</version>
-	<name>homepage</name>
+	<name>homepage2022</name>
 	<url>http://www.egovframe.go.kr</url>
 
 	<licenses>
@@ -130,18 +130,29 @@
 			<version>1.8.1</version>
 		</dependency>
 
-				<!-- mysql driver -->
-		
+		<dependency>
+			<groupId>org.hsqldb</groupId>
+			<artifactId>hsqldb</artifactId>
+			<version>2.3.2</version>
+		</dependency>
+
+		<!-- mysql driver -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.31</version>
         </dependency>
-      
 
+		<!-- oracle 10g driver -->
+		<!--
+		<dependency>
+			<groupId>ojdbc</groupId>
+			<artifactId>ojdbc</artifactId>
+			<version>14</version>
+		</dependency>
+		-->
 
 		<!-- log4jdbc driver -->
-     
         <dependency>
             <groupId>com.googlecode.log4jdbc</groupId>
             <artifactId>log4jdbc</artifactId>
@@ -153,8 +164,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
-      
-
+		
 		<dependency>
 			<groupId>commons-fileupload</groupId>
 			<artifactId>commons-fileupload</artifactId>
@@ -173,35 +183,64 @@
 			<artifactId>icu4j</artifactId>
 			<version>53.1</version>
 		</dependency>
-		<!-- Vaildator -->
-	<dependency>
-	<groupId>javax.validation</groupId>
-	<artifactId>validation-api</artifactId>
-	<version>1.1.0.Final</version>	
-	</dependency>
-	
-	<dependency>
-	 <groupId>org.hibernate</groupId>
-	<artifactId>hibernate-validator</artifactId>
-	<version>5.2.4.Final</version>	
-	</dependency>
-	
-	<dependency>
-		<groupId>net.sf.json-lib</groupId>
-		<artifactId>json-lib</artifactId>
-		<version>2.4</version>
-		<classifier>jdk15</classifier>	
-	</dependency>	
-	
-	<!-- 썸네일 -->
-	<dependency>
-		<groupId>net.coobird</groupId>
-		<artifactId>thumbnailator</artifactId>
-		<version>0.4.2</version>	
-	</dependency>	
-	</dependencies>	
-	
-	
+		
+		<!-- Validator -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>1.1.0.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>5.2.4.Final</version>
+        </dependency>
+        
+        <!-- 썸네일 -->
+		<dependency>
+		    <groupId>net.coobird</groupId>
+		    <artifactId>thumbnailator</artifactId>
+		    <version>0.4.2</version>
+		</dependency>
+		
+		<!-- JSON -->
+		<dependency>
+		    <groupId>net.sf.json-lib</groupId>
+		    <artifactId>json-lib</artifactId>
+		    <version>2.4</version>
+		    <classifier>jdk15</classifier>
+		</dependency>
+		
+		<!-- 네이버 로그인 -->
+		<dependency>
+		    <groupId>com.googlecode.json-simple</groupId>
+		    <artifactId>json-simple</artifactId>
+		    <version>1.1.1</version>
+		</dependency>
+		
+		<!-- oauth2 login -->
+	    <dependency>
+              <groupId>com.github.scribejava</groupId>
+              <artifactId>scribejava-apis</artifactId>
+              <version>5.6.0</version>
+        </dependency>
+		
+        <dependency>
+              <groupId>com.github.scribejava</groupId>
+              <artifactId>scribejava-core</artifactId>
+              <version>2.8.1</version>
+        </dependency>
+        
+        <dependency>
+		    <groupId>com.squareup.okhttp3</groupId>
+		    <artifactId>okhttp</artifactId>
+		    <version>4.2.2</version>
+		</dependency>
+		<!-- //네이버 로그인 -->
+		
+	</dependencies>
+
     <build>
         <defaultGoal>install</defaultGoal>
         <directory>${basedir}/target</directory>
