@@ -9,7 +9,7 @@ public interface ReservationService {
 	//예약목록 가져오기
 	public List<EgovMap> selectReservationList(ReservationVO vo) throws Exception;
 	//예약목록 수
-	public int selectRervationListCnt(ReservationVO vo) throws Exception;
+	public int selectReservationListCnt(ReservationVO vo) throws Exception;
 	//예약 상세정보
 	public ReservationVO selectReservation(ReservationVO vo) throws Exception;
 	//예약 등록하기
@@ -18,4 +18,6 @@ public interface ReservationService {
 	public void updateReservation(ReservationVO vo) throws Exception;
 	//예약 삭제하기
 	public void deleteReservation(ReservationVO vo) throws Exception;
+	
+	
 }

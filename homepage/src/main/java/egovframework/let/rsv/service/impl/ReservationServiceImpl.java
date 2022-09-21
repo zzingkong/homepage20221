@@ -35,7 +35,7 @@ public class ReservationServiceImpl extends EgovAbstractServiceImpl implements R
 		
 		//예약목록수
 		@Override
-		public int selectRervationListCnt(ReservationVO vo) throws Exception {
+		public int selectReservationListCnt(ReservationVO vo) throws Exception {
 			return reservationMapper.selectReservationListCnt(vo);
 		}
 		

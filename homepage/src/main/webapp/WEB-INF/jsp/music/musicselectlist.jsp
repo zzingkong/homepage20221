@@ -84,17 +84,6 @@
                 <td>DNA</td>
                 <td>   
 	              	<img class="heart" src="/asset/front/images/heart2.png">
-	                      <script type="text/javascript"> 
-	                      
-							       $('.heart').on("click",function(){
-							    	   $(this).toggleClass("on");
-							    	   if($(this).hasClass("on")){
-							    		  this.src = "/asset/front/images/f_heart2.png";
-							    	   } else {
-							    		   this.src = "/asset/front/images/heart2.png";
-							    	   }
-							       });
-   							</script>  
                  </td>
             </tr>
             <tr>
@@ -102,17 +91,6 @@
                 <td>보조개</td>
                 <td>
                   <img class="heart" src="/asset/front/images/heart2.png">
-	                      <script type="text/javascript"> 
-	                      
-							       $('.heart').on("click",function(){
-							    	   $(this).toggleClass("on");
-							    	   if($(this).hasClass("on")){
-							    		  this.src = "/asset/front/images/f_heart2.png";
-							    	   } else {
-							    		   this.src = "/asset/front/images/heart2.png";
-							    	   }
-							       });
-   							</script>  
                 </td>
             </tr>
             <tr>
@@ -120,17 +98,6 @@
                 <td>Her</td>
                 <td>
                  <img class="heart" src="/asset/front/images/heart2.png">
-	                      <script type="text/javascript"> 
-	                      
-							       $('.heart').on("click",function(){
-							    	   $(this).toggleClass("on");
-							    	   if($(this).hasClass("on")){
-							    		  this.src = "/asset/front/images/f_heart2.png";
-							    	   } else {
-							    		   this.src = "/asset/front/images/heart2.png";
-							    	   }
-							       });
-   							</script>  
                 </td>
             </tr>
             <tr>
@@ -138,17 +105,6 @@
                 <td>Ipsum</td>
                 <td>
                   <img class="heart" src="/asset/front/images/heart2.png">
-	                      <script type="text/javascript"> 
-	                      
-							       $('.heart').on("click",function(){
-							    	   $(this).toggleClass("on");
-							    	   if($(this).hasClass("on")){
-							    		  this.src = "/asset/front/images/f_heart2.png";
-							    	   } else {
-							    		   this.src = "/asset/front/images/heart2.png";
-							    	   }
-							       });
-   							</script>  
                 </td>
             </tr>
             <tr>
@@ -156,17 +112,6 @@
                 <td>Tear</td>
                 <td>
                   <img class="heart" src="/asset/front/images/heart2.png">
-	                      <script type="text/javascript"> 
-	                      
-							       $('.heart').on("click",function(){
-							    	   $(this).toggleClass("on");
-							    	   if($(this).hasClass("on")){
-							    		  this.src = "/asset/front/images/f_heart2.png";
-							    	   } else {
-							    		   this.src = "/asset/front/images/heart2.png";
-							    	   }
-							       });
-   							</script>  
                 </td>
             </tr>
             <tr>
@@ -174,17 +119,6 @@
                 <td>불타오르네</td>
                 <td>
                 	<img class="heart" src="/asset/front/images/heart2.png">
-	                      <script type="text/javascript"> 
-	                      
-							       $('.heart').on("click",function(){
-							    	   $(this).toggleClass("on");
-							    	   if($(this).hasClass("on")){
-							    		  this.src = "/asset/front/images/f_heart2.png";
-							    	   } else {
-							    		   this.src = "/asset/front/images/heart2.png";
-							    	   }
-							       });
-   							</script>                  
                 </td>
             </tr>
             <tr>
@@ -192,17 +126,6 @@
                 <td>butter</td>
                 <td>
                 	<img class="heart" src="/asset/front/images/heart2.png">
-	                      <script type="text/javascript"> 
-	                      
-							       $('.heart').on("click",function(){
-							    	   $(this).toggleClass("on");
-							    	   if($(this).hasClass("on")){
-							    		  this.src = "/asset/front/images/f_heart2.png";
-							    	   } else {
-							    		   this.src = "/asset/front/images/heart2.png";
-							    	   }
-							       });
-   							</script>                  
                 </td>
             </tr>
     </table>
@@ -223,6 +146,18 @@
           </li>
         </ul>
       </nav>
+      
+<script>
+
+$('.heart').on("click",function(){
+ $(this).toggleClass("on");
+ if($(this).hasClass("on")){
+ this.src = "/asset/front/images/f_heart2.png";
+ } else {
+  this.src = "/asset/front/images/heart2.png";
+ }
+});
+</script>
 </body>
 
 </html>

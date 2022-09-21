@@ -2,8 +2,6 @@ package egovframework.let.rsv.service;
 
 import java.io.Serializable;
 
-import egovframework.com.cmm.ComDefaultVO;
-
 
 public class ReservationApplyVO extends ReservationVO implements Serializable {
 	//예약ID

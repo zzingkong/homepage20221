@@ -70,6 +70,7 @@
 		<include refid="selectReservationListWhere"></include>
 	</select>
 	
+	<!-- 드롭박스에서 메뉴 선택 후 검색을 할때 -->
 	<sql id="selectReservationListWhere">
 		<where>
 			A.USE_AT = 'Y'

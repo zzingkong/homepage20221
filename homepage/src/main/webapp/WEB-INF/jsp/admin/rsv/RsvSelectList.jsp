@@ -1,40 +1,32 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
-<%@ taglib prefix="ui" uri="http://egovframework.gov/ctl/ui" %>    
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>  
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>    
-
-
-	
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="ui" uri="http://egovframework.gov/ctl/ui"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Language" content="ko">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-<title>수업용 게시판</title>
+<meta charset="UTF-8">
+<title>예약관리</title>
+
+<!-- BoardSelectList CSS -->
 <!-- BBS Style -->
 <link href="/asset/BBSTMP_0000000000001/style.css" rel="stylesheet"/>
 <!-- 공통 style -->
 <link href="/asset/LYTTMP_0000000000000/style.css" rel="stylesheet"/>
-<link href="/asset/front/style.css" rel="stylesheet"/>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
-<link rel="stylesheet" type="text/css" href="/asset/front/style.css">
-<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
 </head>
 <body>
 
-<%--기본url --%>
-<c:url var="_BASE_PARAM" value="">	
-	<c:param name="menuNo" value="50"/>
-	<c:if test="${not empty searchVO.searchCondition}">
-		<c:param name="searchCondition" value="${searchVO.searchCondition}"/>
-	</c:if>
-	<c:if test="${not empty searchVO.searchKeyword}">
-		<c:param name="searchKeyword" value="${searchVO.searchKeyword}"/>
-	</c:if>
+<!-- 기본 URL -->
+<c:url var="_BASE_PARAM" value="">
+   <c:param name="searchCondition" value="${searchVO.searchCondition}"/>
+   <c:if test="${not empty searchVO.searchKeyword}">
+      <c:param name="searchKeyword" value="${searchVO.searchKeyword}"/>
+   </c:if>
 </c:url>
 
 <!-- content 시작 -->
