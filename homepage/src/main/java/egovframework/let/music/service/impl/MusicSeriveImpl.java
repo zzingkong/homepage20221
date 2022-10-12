@@ -8,8 +8,7 @@ import org.springframework.stereotype.Service;
 
 import egovframework.let.music.service.MusicService;
 import egovframework.let.music.service.MusicVO;
-import egovframework.rte.fdl.cmmn.EgovAbstractServiceImpl;
-import egovframework.rte.fdl.idgnr.EgovIdGnrService;
+
 import egovframework.rte.psl.dataaccess.util.EgovMap;
 
 //어노테이션을 무조건 하나만 존재해야함
